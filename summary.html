@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.ico"
+      sizes="16x16 32x32 48x48 64x64"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/summary.css" />
+    <link rel="stylesheet" href="./css/order.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+    <title>Summary | Mr. Tone Guitar Shop</title>
+  </head>
+  <body class="background">
+    <nav class="navigation__bg">
+      <div class="navigation container container--xl">
+        <!-- logo, account -->
+        <div class="navigation__item">
+          <div>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo image"
+                class="navigation__logo"
+              />
+            </a>
+          </div>
+          <div class="navigation__profile">
+            <a href="./register.html">
+              <div>
+                <img src="./assets/icons/icon_account.svg" alt="Account icon" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- nav items -->
+        <div class="navigation__item">
+          <ul class="navigation__links">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li><a href="./shop.html">Shop</a></li>
+            <li class="dropdown">
+              <a href="./order.html" class="navigation__links--active">Order</a>
+              <div class="dropdown__content">
+                <ul class="navigation__links dropdown__links">
+                  <li><a href="./place-order.html">Place Order</a></li>
+                  <li><a href="./summary.html">Summary of order</a></li>
+                  <li><a href="./order.html">History of orders</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./profile.html">Profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="order">
+      <hr class="divider container--xl" />
+      <img id="product-image" src="" alt="Product Image" />
+      <h2 id="product-name"></h2>
+      <p id="product-price"></p>
+      <label for="quantity">Quantity:</label>
+      <input
+        type="number"
+        id="quantity"
+        value="1"
+        min="1"
+        class="quantity-input"
+      />
+      <p id="total-price"></p>
+      <button class="remove-button" onclick="removeProduct()">Remove</button>
+    </div>
+
+    <div class="summary">
+      <hr class="divider container--xl" />
+      <h2></h2>
+      <p id="subtotal"></p>
+      <p id="tax"></p>
+      <p id="total"></p>
+    </div>
+
+    <div
+      class="checkout-container"
+      style="text-align: center; margin-top: 20px"
+    >
+      <button id="checkoutButton" class="checkout-button">Checkout</button>
+    </div>
+
+    <!-- Modal for Shipping Details -->
+    <div id="shippingModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Shipping Details</h2>
+        <form id="shippingForm" class="shipping-form">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              required
+              placeholder="Enter your address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="Enter your city"
+            />
+          </div>
+          <div class="form-group">
+            <label for="zip">ZIP Code:</label>
+            <input
+              type="text"
+              id="zip"
+              name="zip"
+              required
+              placeholder="Enter your ZIP code"
+            />
+          </div>
+          <button
+            type="submit"
+            id="placeOrderButton"
+            class="place-order-button"
+          >
+            Place Order
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/summary.js"></script>
+    <script src="js/checkout.js"></script>
+    <script>
+      document
+        .getElementById("placeOrderButton")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get product details
+          const productImage = document.getElementById("product-image").src;
+          const productName =
+            document.getElementById("product-name").textContent;
+          const productPrice =
+            document.getElementById("product-price").textContent;
+          const quantity = document.getElementById("quantity").value;
+
+          // Get shipping details
+          const shippingDetails = {
+            name: document.getElementById("name").value,
+            address: document.getElementById("address").value,
+            city: document.getElementById("city").value,
+            zip: document.getElementById("zip").value,
+          };
+
+          // Create an order object
+          const order = {
+            productImage,
+            productName,
+            productPrice,
+            quantity,
+            shippingDetails,
+          };
+
+          // Save order to local storage
+          localStorage.setItem("order", JSON.stringify(order));
+
+          // Redirect to order.html
+          window.location.href = "./order.html";
+        });
+    </script>
+  </body>
+</html>

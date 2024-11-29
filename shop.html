@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.ico"
+      sizes="16x16 32x32 48x48 64x64"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
+    <title>Shop | Mr. Tone Guitar Shop</title>
+  </head>
+  <body class="background">
+    <nav class="navigation__bg">
+      <div class="navigation container container--xl">
+        <!-- logo, account -->
+        <div class="navigation__item">
+          <div>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo image"
+                class="navigation__logo"
+              />
+            </a>
+          </div>
+          <div class="navigation__profile">
+            <a href="./register.html">
+              <img src="./assets/icons/icon_account.svg" alt="Account icon" />
+            </a>
+          </div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="navigation__item">
+          <ul class="navigation__links">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./shop.html" class="navigation__links--active">Shop</a>
+            </li>
+            <li class="dropdown">
+              <a href="./order.html">Order</a>
+              <div class="dropdown__content">
+                <ul class="navigation__links dropdown__links">
+                  <li><a href="./place-order.html">Place Order</a></li>
+                  <li><a href="./summary.html">Summary of order</a></li>
+                  <li><a href="./order.html">History of orders</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./profile.html">Profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--padding">
+      <hr class="divider container--xl" />
+
+      <div class="shop container container--xl">
+        <!-- selection -->
+        <div class="categories">
+          <h3 class="categories__title">Shop By Category</h3>
+
+          <!-- categories item -->
+          <div>
+            <h4 class="categories__subtitle">Acoustic</h4>
+            <ul>
+              <li class="categories__checkbox">
+                <input
+                  type="checkbox"
+                  id="acoustic"
+                  name="acoustic"
+                  value="acoustic"
+                  onchange="filterProducts()"
+                />
+                <label for="acoustic">Acoustic Guitar</label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- categories item -->
+          <div>
+            <h4 class="categories__subtitle">Electric</h4>
+            <ul>
+              <li class="categories__checkbox">
+                <input
+                  type="checkbox"
+                  id="electric"
+                  name="electric"
+                  value="electric"
+                  onchange="filterProducts()"
+                />
+                <label for="electric">Electric Guitar</label>
+              </li>
+              <li class="categories__checkbox">
+                <input
+                  type="checkbox"
+                  id="bass"
+                  name="bass"
+                  value="bass"
+                  onchange="filterProducts()"
+                />
+                <label for="bass">Electric Bass</label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- categories item -->
+          <div>
+            <h4 class="categories__subtitle">Accessories</h4>
+            <ul>
+              <li class="categories__checkbox">
+                <input
+                  type="checkbox"
+                  id="pedal"
+                  name="pedal"
+                  value="pedal"
+                  onchange="filterProducts()"
+                />
+                <label for="pedal">Pedal</label>
+              </li>
+              <li class="categories__checkbox">
+                <input
+                  type="checkbox"
+                  id="amplifier"
+                  name="amplifier"
+                  value="amplifier"
+                  onchange="filterProducts()"
+                />
+                <label for="amplifier">Amplifier</label>
+              </li>
+              <li class="categories__checkbox">
+                <input
+                  type="checkbox"
+                  id="tuner"
+                  name="tuner"
+                  value="tuner"
+                  onchange="filterProducts()"
+                />
+                <label for="tuner">Tuner</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- products -->
+        <div class="products" id="product-list">
+          <!-- acoustic products -->
+          <div class="products__item acoustic">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/gt_04.png"
+                alt="American Acoustasonic Telecaster"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >AMERICAN ACOUSTASONIC TELECASTER</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 4,500</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('AMERICAN ACOUSTASONIC TELECASTER', '₱ 4500', './assets/images/gt_04.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item acoustic">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/gt_05.png"
+                alt="Yamaha FG800"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">REDONDON GUITAR</a>
+            </h4>
+            <p class="products__item__price">PHP 25,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('REDONDON GUITAR', '₱ 25000', './assets/images/gt_05.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item acoustic">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/gt_06.png"
+                alt="Fender CD-60S"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >TIM ARMSTRONG HELLCAT, CHECKERBOARD</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 30,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('TIM ARMSTRONG HELLCAT', '₱ 30000', './assets/images/gt_06.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- electric products -->
+          <div class="products__item electric">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/gt_07.png"
+                alt="Redondon Guitar"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >BLUE LIGHT TELECASTER</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 9,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('>BLUE LIGHT TELECASTER', '₱ 9000', './assets/images/gt_07.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item electric">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/gt_08.png"
+                alt="Gibson Les Paul"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >VINTAGE REDFLAME GUITAR</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 10,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('VINTAGE REDFLAME GUITAR', '₱ 10000', './assets/images/gt_08.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item bass">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/ba_01.png"
+                alt="Tim Armstrong Hellcat, Checkerboard"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">JOHN PRECISION BASS</a>
+            </h4>
+            <p class="products__item__price">PHP 7,200</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('JOHN PRECISION BASS', '₱ 7200', './assets/images/ba_01.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item bass">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/ba_02.png"
+                alt="Tim Armstrong Hellcat, Checkerboard"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >FIVE STRINGED SUNNY BASS</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 6,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('FIVE STRINGED SUNNY BASS', '₱ 6000', './assets/images/ba_02.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item bass">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/ba_03.png"
+                alt="Tim Armstrong Hellcat, Checkerboard"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">CROOKWORTH KING BASS</a>
+            </h4>
+            <p class="products__item__price">PHP 11,500</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('CROOKWORTH KING BASS', '₱ 11500', './assets/images/ba_03.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__item electric">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/gt_09.png"
+                alt="Gibson Les Paul"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">BLACK AM TELECASTER</a>
+            </h4>
+            <p class="products__item__price">PHP 11,500</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('BLACK AM TELECASTER', '₱ 11500', './assets/images/gt_09.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- accessories products -->
+          <div class="products__item pedal">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/pd_01.png"
+                alt="BOSS DS-1 Distortion Pedal"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >BOSS DS-1 Distortion Pedal</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 3,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('BOSS DS-1 Distortion Pedal', '₱ 3000', './assets/images/pd_01.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__item pedal">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/pd_02.png"
+                alt="BOSS DS-1 Distortion Pedal"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">BOSS DYNAMIC WAH</a>
+            </h4>
+            <p class="products__item__price">PHP 4,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('BOSS DYNAMIC WAH', '₱ 4000', './assets/images/pd_02.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__item pedal">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/pd_03.png"
+                alt="BOSS DS-1 Distortion Pedal"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">BOSS OVERDRIVE OD-1X</a>
+            </h4>
+            <p class="products__item__price">PHP 4,500</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('BOSS OVERDRIVE OD-1X', '₱ 4500', './assets/images/pd_03.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item amplifier">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/amp_01.png"
+                alt="Marshall MG30GFX Amplifier"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">MARSHALL CM800</a>
+            </h4>
+            <p class="products__item__price">PHP 5,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('MARSHALL CM800', '₱ 5000', './assets/images/amp_01.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item amplifier">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/amp_02.png"
+                alt="Marshall MG30GFX Amplifier"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">MARSHALL MG15R 2</a>
+            </h4>
+            <p class="products__item__price">PHP 8,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('MARSHALL MG15R 2', '₱ 8000', './assets/images/amp_02.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__item amplifier">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/amp_03.png"
+                alt="Marshall MG30GFX Amplifier"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">MARSHALL MS-2R</a>
+            </h4>
+            <p class="products__item__price">PHP 9,500</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('MARSHALL MS-2R', '₱ 9500', './assets/images/amp_03.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__item tuner">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/tn_01.png"
+                alt="Korg Clip-On Tuner"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >BOSS CHROMATIC TUNER TU-3</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 900</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('BOSS CHROMATIC TUNER TU-3', '₱ 900', './assets/images/tn_01.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__item tuner">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/tn_02.png"
+                alt="Korg Clip-On Tuner"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link"
+                >TC ELECTRONIC POLYTUNE 2 MINI</a
+              >
+            </h4>
+            <p class="products__item__price">PHP 4,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('TC ELECTRONIC POLYTUNE 2 MINI', '₱ 4000', './assets/images/tn_02.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__item tuner">
+            <a href="./product.html">
+              <img
+                class="products__item__img shop__item__img"
+                src="./assets/images/tn_03.png"
+                alt="Korg Clip-On Tuner"
+              />
+            </a>
+            <h4 class="products__item__name">
+              <a href="./product.html" class="nav-link">KORG PITCH BLACK X</a>
+            </h4>
+            <p class="products__item__price">PHP 3,000</p>
+            <div class="products__item__buttons">
+              <div class="">
+                <span> </span>
+                <button
+                  class="button buy-button"
+                  onclick="buyProduct('KORG PITCH BLACK X', '₱ 3000', './assets/images/tn_03.png')"
+                >
+                  BUY NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/shop.js"></script>
+    <script src="./js/buy.js"></script>
+  </body>
+</html>

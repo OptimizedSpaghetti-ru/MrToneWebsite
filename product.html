@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.ico"
+      sizes="16x16 32x32 48x48 64x64"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/product.css" />
+    <title>Shop | Mr. Tone Guitar Shop</title>
+  </head>
+  <body class="background">
+    <nav class="navigation__bg">
+      <div class="navigation container container--xl">
+        <!-- logo, account -->
+        <div class="navigation__item">
+          <div>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo image"
+                class="navigation__logo"
+              />
+            </a>
+          </div>
+          <div class="navigation__profile">
+            <a href="./register.html">
+              <div>
+                <img src="./assets/icons/icon_account.svg" alt="Account icon" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- nav items -->
+        <div class="navigation__item">
+          <ul class="navigation__links">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./shop.html" class="navigation__links--active">Shop</a>
+            </li>
+
+            <li class="dropdown">
+              <a href="./order.html">Order</a>
+              <div class="dropdown__content">
+                <ul class="navigation__links dropdown__links">
+                  <li><a href="./place-order.html">Place Order</a></li>
+                  <li><a href="./summary.html">Summary of order</a></li>
+                  <li>
+                    <a href="./order.html">History of orders</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="./about.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--padding">
+      <hr class="divider container--xl" />
+      <div class="container container--xl product">
+        <div class="product__block">
+          <div class="product__img__container">
+            <img class="product__img" src="assets/images/ba_01-r.png" alt="" />
+          </div>
+          <div class="product__desc">
+            <h3>DESCRIPTION</h3>
+            <br />
+            <p>
+              The John Precision Bass draws from more than sixty years of
+              innovation, inspiration and evolution to meet the demands of
+              today's working player.
+            </p>
+            <br />
+            <p>
+              Our popular Deep "C" neck now sports smooth rolled fingerboard
+              edges, a "Super-Natural" satin finish and a newly sculpted neck
+              heel for a supremely comfortable feel and easy access to the upper
+              register. New V-Mod II Stratocaster single-coil pickups are more
+              articulate than ever while retaining bell-like chime and warmth.
+              An upgraded 2-point tremolo with a cold-rolled steel block
+              increases sustain, clarity and high-end sparkle.
+            </p>
+            <br />
+          </div>
+        </div>
+        <div class="product__block product__info">
+          <h1>John Precision Bass</h1>
+          <p>Model #: 0113902706</p>
+          <div class="product__colors">
+            <div>
+              <h3 class="product__colors__subheader">Color:</h3>
+              <span class="product__colors__subheader">Black</span>
+            </div>
+            <div class="product__circle__container">
+              <div class="product__circle" id="color-black"></div>
+              <div class="product__circle" id="color-navy_blue"></div>
+              <div class="product__circle" id="color-gray"></div>
+            </div>
+          </div>
+          <div class="product__colors">
+            <div>
+              <h3 class="product__colors__subheader">Fingerboard Material:</h3>
+              <span class="product__colors__subheader">Maple</span>
+            </div>
+            <div class="product__circle__container">
+              <div class="product__circle" id="material-maple"></div>
+            </div>
+          </div>
+          <span class="product__pricing-bar">
+            <strong>PHP 900</strong>
+            <div class="button" id="buy-button">
+              <span>
+                <img
+                  class="button__icon"
+                  src="./assets/icons/shopping_bag.svg"
+                  alt="Buy icon"
+                />
+              </span>
+              Buy
+            </div>
+            <div class="modal" id="buy-modal">
+              <div class="modal__content">
+                <div class="modal__header">
+                  <h1>Terms of use and service</h1>
+                  <button class="modal__close close-modal">×</button>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus eos pariatur quisquam, iusto, dolorum exercitationem
+                  reprehenderit fuga tempore quam sint suscipit enim. Voluptate
+                  maiores quas suscipit hic, illo mollitia id!
+                </p>
+                <div class="modal__footer">
+                  <button class="button close-modal">I Agree</button
+                  ><button class="button close-modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </span>
+          <div>
+            <h3>Reviews</h3>
+            <br /><br /><br /><br /><br />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/product.js"></script>
+  </body>
+</html>

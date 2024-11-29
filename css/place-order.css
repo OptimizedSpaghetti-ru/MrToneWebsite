@@ -1,0 +1,27 @@
+.place__heading {
+	font-size: 2.25rem;
+	text-transform: uppercase;
+	margin: 2.25rem auto;
+}
+
+.place__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.place__input {
+	margin: 1rem 0;
+	display: flex;
+}
+
+.place__input__text {
+	height: 40px;
+	width: 250px;
+	background: linear-gradient(
+		90deg,
+		rgba(var(--color-primary__rgb), 0.9) 0%,
+		rgba(var(--color-accent__rgb), 0.9) 100%
+	);
+	border: 2px solid black;
+	box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,89 @@
+.auth {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	color: var(--color-black);
+	margin: 1.5rem auto;
+}
+
+.auth__link {
+	text-decoration: underline;
+	color: var(--color-primary--darker);
+	font-weight: bold;
+}
+
+.auth-form {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.auth-form__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.auth-form__item label {
+	text-transform: uppercase;
+	margin: 0.25rem 0;
+	font-weight: bold;
+}
+
+.auth-form__item input {
+	width: 300px;
+	height: 35px;
+	background-color: var(--color-white);
+}
+
+.auth-form__button__container {
+	align-self: center;
+}
+
+.auth-form__button {
+	padding: 0.70rem 3rem;
+	background-color: var(--color-black);
+	color: var(--color-white);
+	border-radius: 10px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.auth-form__button:hover {
+	background-color: #505050;
+}
+.auth-form__item input {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: right; 
+}
+.auth-form__button {
+    text-decoration: none; 
+}
+.signup-button {
+    margin-top: 10px;
+}
+.auth-form__button {
+	flex: 1; /* make the buttons equally wide */
+	margin: 0 5px;
+	white-space: nowrap;
+  }
+  
+  .auth-form__button:nth-child(2) { 
+	flex: 0.9; 
+}
+.auth-form__button {
+	flex: 1; 
+	margin: 0 5px;
+	padding: 10px 20px; 
+	font-size: 16px; 
+	font-weight: bold; 
+	text-align: center; 
+  }

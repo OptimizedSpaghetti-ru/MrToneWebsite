@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.ico"
+      sizes="16x16 32x32 48x48 64x64"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+    <title>Login | Mr. Tone Guitar Shop</title>
+  </head>
+  <body class="background">
+    <nav class="navigation__bg">
+      <div class="navigation container container--xl">
+        <!-- logo, account -->
+        <div class="navigation__item">
+          <div>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo image"
+                class="navigation__logo"
+              />
+            </a>
+          </div>
+          <div class="navigation__profile">
+            <a href="./register.html">
+              <div></div>
+            </a>
+          </div>
+        </div>
+        <!-- nav items -->
+        <div class="navigation__item">
+          <ul class="navigation__links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./shop.html">Shop</a></li>
+            <li class="dropdown">
+              <a href="./order.html">Order</a>
+              <div class="dropdown__content">
+                <ul class="navigation__links dropdown__links">
+                  <li><a href="./place-order.html">Place Order</a></li>
+                  <li><a href="./summary.html">Summary of order</a></li>
+                  <li><a href="./order.html">History of orders</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--padding">
+      <hr class="divider container--xl" />
+      <div class="auth container container--xl">
+        <div>
+          <h1>Login</h1>
+          <p>
+            <a href="./reset-password.html" class="auth__link"
+              >Forgot your password?</a
+            >
+          </p>
+        </div>
+
+        <form id="loginForm">
+          <div class="auth-form">
+            <div class="auth-form__item">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="auth-form__item">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="auth-form__button__container">
+              <button type="submit" class="auth-form__button">LOGIN</button>
+              <a href="register.html" class="auth-form__button"
+                >Create Account</a
+              >
+            </div>
+          </div>
+          <p id="warning" style="color: red; display: none">
+            Please enter both email and password.
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.ico"
+      sizes="16x16 32x32 48x48 64x64"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/place-order.css" />
+    <title>Place Order | Mr. Tone Guitar Shop</title>
+  </head>
+  <body class="background">
+    <nav class="navigation__bg">
+      <div class="navigation container container--xl">
+        <!-- logo, account -->
+        <div class="navigation__item">
+          <div>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo image"
+                class="navigation__logo"
+              />
+            </a>
+          </div>
+          <div class="navigation__profile">
+            <a href="./register.html">
+              <img src="./assets/icons/icon_account.svg" alt="Account icon" />
+            </a>
+          </div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="navigation__item">
+          <ul class="navigation__links">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li><a href="./shop.html">Shop</a></li>
+            <li class="dropdown">
+              <a href="./order.html" class="navigation__links--active">Order</a>
+              <div class="dropdown__content">
+                <ul class="navigation__links dropdown__links">
+                  <li><a href="./place-order.html">Place Order</a></li>
+                  <li><a href="./summary.html">Summary of order</a></li>
+                  <li><a href="./order.html">History of orders</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./profile.html">Profile</a></li>
+            <!-- Added Profile button -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--padding">
+      <hr class="divider container--xl" />
+      <div class="container container--xl">
+        <h1 class="place__heading">Place Order</h1>
+        <form>
+          <div class="place__form">
+            <label for="modelNumber">Enter Model Number:</label>
+            <div class="place__input">
+              <input
+                type="text"
+                id="modelNumber"
+                name="modelNumber"
+                class="place__input__text"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

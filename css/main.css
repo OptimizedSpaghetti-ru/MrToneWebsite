@@ -1,0 +1,93 @@
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	src: url("../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf")
+		format("truetype");
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	src: url("../assets/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf")
+		format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Serif";
+	font-style: normal;
+	src: url("../assets/fonts/NotoSerif-ExtraLight.ttf") format("truetype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+:root {
+	/* common breakpoints
+	*  to avoid infinitely scaling for big screens
+	*/
+	--breakpoint-sm: 600px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1280px;
+
+	/* colors in rgb without the rgb function */
+	--color-primary__rgb: 255, 240, 173;
+	--color-primary--darker__rgb: 179, 146, 0;
+	--color-primary--pale__rgb: 247, 235, 182;
+	--color-accent__rgb: 255, 168, 249;
+	--color-accent--pale__rgb: 222, 201, 221;
+
+	/* colors */
+	--color-primary: rgb(var(--color-primary__rgb));
+	--color-primary--darker: rgb(var(--color-primary--darker__rgb));
+	--color-primary--pale: rgb(var(--color-primary--pale__rgb));
+	--color-accent: rgb(var(--color-accent__rgb));
+	--color-accent--pale: rgb(var(--color-accent--pale__rgb));
+	--color-white: #f7f7f7;
+	--color-black: #383838;
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+	padding: 0 1rem;
+}
+
+.container--sm {
+	max-width: var(--breakpoint-sm);
+}
+
+.container--md {
+	max-width: var(--breakpoint-md);
+}
+
+.container--lg {
+	max-width: var(--breakpoint-lg);
+}
+
+.container--xl {
+	max-width: var(--breakpoint-xl);
+}
+
+.background {
+	background: linear-gradient(
+			90deg,
+			rgba(var(--color-primary__rgb), 0.9) 0%,
+			rgba(var(--color-accent__rgb), 0.9) 100%
+		),
+		url("../assets/images/bg.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	background-attachment: fixed;
+}
+
+.main--padding {
+	padding: 0.5rem;
+}
+

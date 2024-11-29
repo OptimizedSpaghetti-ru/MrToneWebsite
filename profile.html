@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.ico"
+      sizes="16x16 32x32 48x48 64x64"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <style>
+      .btn {
+        padding: 5px 12px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .btn--edit {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .btn--edit:hover {
+        background-color: #45a049;
+      }
+
+      .btn--delete {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .btn--delete:hover {
+        background-color: #da190b;
+      }
+      .btn--logout {
+        background-color: #383838;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-left: 900px;
+      }
+
+      .btn--logout:hover {
+        background-color: #696969;
+      }
+    </style>
+
+    <title>Profile | Mr. Tone Guitar Shop</title>
+  </head>
+  <body class="background">
+    <nav class="navigation__bg">
+      <div class="navigation container container--xl">
+        <!-- logo, account -->
+        <div class="navigation__item">
+          <div>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo image"
+                class="navigation__logo"
+              />
+            </a>
+          </div>
+          <div class="navigation__profile">
+            <a href="./register.html">
+              <img src="./assets/icons/icon_account.svg" alt="Account icon" />
+            </a>
+          </div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="navigation__item">
+          <ul class="navigation__links">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li><a href="./shop.html">Shop</a></li>
+            <li class="dropdown">
+              <a href="./order.html">Order</a>
+              <div class="dropdown__content">
+                <ul class="navigation__links dropdown__links">
+                  <li><a href="./place-order.html">Place Order</a></li>
+                  <li><a href="./summary.html">Summary of order</a></li>
+                  <li><a href="./order.html">History of orders</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li>
+              <a href="./profile.html" class="navigation__links--active"
+                >Profile</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--padding">
+      <hr class="divider container--xl" />
+      <div class="profile container container--xl">
+        <div class="profile__desc">
+          <img src="./assets/images/IGNACIO.jpg" alt="" class="profile__img" />
+          <span>
+            <p>
+              An aspiring musician with a passion for guitar, constantly honing
+              skills to achieve excellence and inspire others through music.
+            </p>
+          </span>
+        </div>
+        <div>
+          <h1>MY PROFILE</h1>
+          <form>
+            <div class="profile__info">
+              <div class="profile__info__item">
+                <label for="first-name">First Name:</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  value="Russell"
+                />
+              </div>
+              <div class="profile__info__item">
+                <label for="last-name">Last Name:</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  value="Ignacio"
+                />
+              </div>
+              <div class="profile__info__item">
+                <label for="birthday">Birthday:</label>
+                <input
+                  type="date"
+                  id="birthday"
+                  name="birthday"
+                  value="2004-12-25"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="profile__actions">
+            <button
+              type="button"
+              class="btn btn--edit"
+              onclick="window.location.href='edit.html'"
+            >
+              Edit Profile
+            </button>
+            <button
+              type="button"
+              class="btn btn--delete"
+              onclick="window.location.href='delete.html'"
+            >
+              Delete Profile
+            </button>
+            <button
+              type="button"
+              class="btn btn--logout"
+              onclick="confirmLogout()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function confirmLogout() {
+        if (confirm("Are you sure you want to logout?")) {
+          window.location.href = "login.html";
+        }
+      }
+    </script>
+  </body>
+</html>

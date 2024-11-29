@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icons/favicon.ico" sizes="16x16 32x32 48x48 64x64" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/featured.css" />
+    <title>Home | Mr. Tone Guitar Shop</title>
+</head>
+<body class="background">
+    <nav class="navigation__bg">
+        <div class="navigation container container--xl">
+            <!-- Logo and Profile Section -->
+            <div class="navigation__item">
+                <div>
+                    <a href="./index.html">
+                        <a href="./index.html">
+                            <img src="./assets/images/logo.png" alt="Logo image" class="navigation__logo" />
+                        </a>
+                    </div>
+                    <div class="navigation__profile">
+                        <a href="./register.html">
+                            <img src="./assets/icons/icon_account.svg" alt="Account icon" />
+                        </a>
+                    </div>
+                    </div>
+                    <!-- Navigation Links -->
+                    <div class="navigation__item">
+                        <ul class="navigation__links">
+                            <li><a href="./index.html" class="navigation__links--active">Home</a></li>
+                            <li><a href="./shop.html">Shop</a></li>
+                            <li class="dropdown">
+                                <a href="./order.html">Order</a>
+                                <div class="dropdown__content">
+                                    <ul class="navigation__links dropdown__links">
+                                        <li><a href="./place-order.html">Place Order</a></li>
+                                        <li><a href="./summary.html">Summary of order</a></li>
+                                        <li><a href="./order.html">History of orders</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./profile.html">Profile</a></li> 
+                        </ul>
+                    </div>
+                    </div>
+                    </nav>
+
+    <main class="main--padding">
+        <hr class="divider container--xl" />
+
+        <!-- Slider Section -->
+        <div class="slider">
+            <div class="slider-container">
+                <img src="assets/images/mr.tone.jpg" alt="Image 1" class="slider-image active">
+                <img src="assets/images/Music guitar tutorials - Made with PosterMyWall.jpg" alt="Image 2" class="slider-image">
+                <img src="assets/images/Music Sessions - Made with PosterMyWall.jpg" alt="Image 3" class="slider-image">
+               
+               
+            </div>
+            <div class="slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              
+                
+            </div>
+            
+		
+		</div>
+			
+        </div>
+
+        <!-- Featured Products Section -->
+        <div class="featured container container--xl">
+            <!-- Featured Products Section -->
+<div class="featured container container--xl">
+    <div class="featured__categories">
+        <div class="button featured__button" id="category1" onclick="showCategory('best-selling')">Best Selling</div>
+        <div class="button featured__button" id="category2" onclick="showCategory('sale')">Sale</div>
+        <div class="button featured__button" id="category3" onclick="showCategory('top-rated')">Top Rated</div>
+        <div class="button featured__button" id="category4" onclick="showCategory('new-items')">New Items</div>
+    </div>
+
+    <!-- Best Selling Products -->
+    <div class="products" id="best-selling">
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_01.png" alt="Product 1" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./products/p1.html" class="nav-link">Rick Owens Guitar</a>
+            </h4>
+            <p class="products__item__price">PHP 4,500</p>
+            <button class="button buy-button" onclick="buyProduct('Rick Owens Guitar', '₱ 4500', './assets/images/gt_01.png')">Buy Now</button>
+        </div>
+        <!-- Add two more products for Best Selling -->
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_02.png" alt="Product 2" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">Jaggedmaster</a>
+            </h4>
+            <p class="products__item__price">PHP 9,000</p>
+            <button class="button buy-button" onclick="buyProduct('Jaggedmaster', '₱ 9000', './assets/images/gt_02.png')">Buy Now</button>
+        </div>
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_03.png" alt="Product 3" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">Montero Acoustic</a>
+            </h4>
+            <p class="products__item__price">PHP 15,000</p>
+            <button class="button buy-button" onclick="buyProduct('Montero Acoustic', '₱ 15000', './assets/images/gt_03.png')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Sale Products -->
+    <div class="products" id="sale" style="display: none;">
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_04.png" alt="Product 4" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">AMERICAN ACOUSTASONIC TELECASTER</a>
+            </h4>
+            <p class="products__item__price">PHP 12,000</p>
+            <button class="button buy-button" onclick="buyProduct('AMERICAN ACOUSTASONIC TELECASTER', '₱ 12000', './assets/images/gt_04.png')">Buy Now</button>
+        </div>
+        <!-- Add two more products for Sale -->
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_05.png" alt="Product 5" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">REDONDON GUITAR</a>
+            </h4>
+            <p class="products__item__price">PHP 20,000</p>
+            <button class="button buy-button" onclick="buyProduct('REDONDON GUITAR', '₱ 20000', './assets/images/gt_05.png')">Buy Now</button>
+        </div>
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_06.png" alt="Product 6" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">TIM ARMSTRONG HELLCAT CHECKBOARD</a>
+            </h4>
+            <p class="products__item__price">PHP 5,500</p>
+            <button class="button buy-button" onclick="buyProduct('TIM ARMSTRONG HELLCAT CHECKBOARD', '₱ 5500', './assets/images/gt_06.png')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Top Rated Products -->
+    <div class="products" id="top-rated" style="display: none;">
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_07.png" alt="Product 7" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./products/p1.html" class="nav-link">BLUE LIGHT TELECASTER</a>
+            </h4>
+            <p class="products__item__price">PHP 9,000</p>
+            <button class="button buy-button" onclick="buyProduct('BLUE LIGHT TELECASTER', '₱ 9000', './assets/images/gt_07.png')">Buy Now</button>
+        </div>
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_08.png" alt="Product 8" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">VINTAGE RED FLAME GUITAR</a>
+            </h4>
+            <p class="products__item__price">PHP 10,000</p>
+            <button class="button buy-button" onclick="buyProduct('VINTAGE RED FLAME GUITAR', '₱ 10000', './assets/images/gt_08.png')">Buy Now</button>
+        </div>
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/gt_09.png" alt="Product 9" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">BLACK AM TELECASTER</a>
+            </h4>
+            <p class="products__item__price">PHP 11,500</p>
+            <button class="button buy-button" onclick="buyProduct('BLACK AM TELECASTER', '₱ 11500', './assets/images/gt_09.png')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- New Items -->
+    <div class="products" id="new-items" style="display: none;">
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/ba_01.png" alt="Product 10" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">JOHN PRECISION BASS</a>
+            </h4>
+            <p class="products__item__price">PHP 7,200</p>
+            <button class="button buy-button" onclick="buyProduct('JOHN PRECISION BASS', '₱ 7200', './assets/images/ba_01.png')">Buy Now</button>
+        </div>
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/ba_02.png" alt="Product 11" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">FIVE-STRINGED SUNNY BASS</a>
+            </h4>
+            <p class="products__item__price">PHP 6,000</p>
+            <button class="button buy-button" onclick="buyProduct('FIVE-STRINGED SUNNY BASS', '₱ 6000', './assets/images/ba_02.png')">Buy Now</button>
+        </div>
+        <div class="products__item">
+            <a href="./product.html">
+                <img class="products__item__img" src="./assets/images/ba_03.png" alt="Product 12" />
+            </a>
+            <h4 class="products__item__name">
+                <a href="./product.html" class="nav-link">CROOKWORTH KING BASS</a>
+            </h4>
+            <p class="products__item__price">PHP 11,500</p>
+            <button class="button buy-button" onclick="buyProduct('CROOKWORTH KING BASS', '₱ 11500', './assets/images/ba_03.png')">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <hr class="divider container--xl" />
+
+        <!-- Featured Videos Section -->
+        <div class="featured-videos">
+            <h2 class="featured-videos__title">FEATURED VIDEOS</h2>
+            <div class="featured-videos__container">
+                <!-- Video Placeholders -->
+                <div class="video-placeholder">
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-placeholder">
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-placeholder">
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/3s1qjpsHYyM?si=xjY9tb_rmPBhusfl&start=19" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-placeholder">
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Xuq_7lG71DU?si=Q31Eix5TE4G2snfj&start=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-placeholder">
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Xuq_7lG71DU?si=Q31Eix5TE4G2snfj&start=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-placeholder">
+                    <div class="video-wrapper">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Xuq_7lG71DU?si=Q31Eix5TE4G2snfj&start=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <audio autoplay loop>
+        <source src="./audio/[Free] Mac Miller Chill Guitar Type Beat - Heavens.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="./js/home.js"></script>
+  
+	<script src="./js/slider.js"></script>
+    <script src="js/homebuy.js"></script>
+</body>
+</html>

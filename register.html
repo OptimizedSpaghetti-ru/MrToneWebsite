@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.ico"
+      sizes="16x16 32x32 48x48 64x64"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+    <title>Create new account | Mr. Tone Guitar Shop</title>
+  </head>
+  <body class="background">
+    <nav class="navigation__bg">
+      <div class="navigation container container--xl">
+        <!-- logo, account -->
+        <div class="navigation__item">
+          <div>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo image"
+                class="navigation__logo"
+              />
+            </a>
+          </div>
+          <div class="navigation__profile">
+            <a href="./register.html">
+              <div>
+                <img src="./assets/icons/icon_account.svg" alt="Account icon" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- nav items -->
+        <div class="navigation__item">
+          <ul class="navigation__links">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li><a href="./shop.html">Shop</a></li>
+
+            <li class="dropdown">
+              <a href="./order.html">Order</a>
+              <div class="dropdown__content">
+                <ul class="navigation__links dropdown__links">
+                  <li><a href="./place-order.html">Place Order</a></li>
+                  <li><a href="./summary.html">Summary of order</a></li>
+                  <li>
+                    <a href="./order.html">History of orders</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a href="./about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--padding">
+      <hr class="divider container--xl" />
+      <div class="auth container container--xl">
+        <div>
+          <h1>Create new Account</h1>
+          <p>
+            Already Registered?
+            <a href="./login.html" class="auth__link">Login</a>.
+          </p>
+        </div>
+
+        <form id="register-form" action="user.php" method="POST">
+          <div class="auth-form">
+            <div class="auth-form__item">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" required />
+            </div>
+            <div class="auth-form__item">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" required />
+            </div>
+            <div class="auth-form__item">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="auth-form__item">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="auth-form__item">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
+            <div class="auth-form__button__container">
+              <button type="submit" class="auth-form__button">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!--Input Validation Script -->
+    <script>
+      document
+        .getElementById("register-form")
+        .addEventListener("submit", function (event) {
+          const firstName = document.getElementById("first-name").value;
+          const lastName = document.getElementById("last-name").value;
+          const dob = document.getElementById("dob").value;
+          const password = document.getElementById("password").value;
+          const namePattern = /^[a-zA-Z]+$/;
+          const today = new Date().toISOString().split("T")[0];
+
+          if (!namePattern.test(firstName)) {
+            alert("First name should not contain special characters.");
+            event.preventDefault();
+          }
+
+          if (!namePattern.test(lastName)) {
+            alert("Last name should not contain special characters.");
+            event.preventDefault();
+          }
+
+          if (dob >= today) {
+            alert("Date of Birth should be a past date.");
+            event.preventDefault();
+          }
+
+          if (
+            password.length < 8 ||
+            !/\d/.test(password) ||
+            !/[a-zA-Z]/.test(password)
+          ) {
+            alert(
+              "Password must be at least 8 characters long and contain both letters and numbers."
+            );
+            event.preventDefault();
+          }
+        });
+    </script>
+  </body>
+</html>
