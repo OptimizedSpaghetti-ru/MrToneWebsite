@@ -275,5 +275,47 @@
   
 	<script src="./js/slider.js"></script>
     <script src="js/homebuy.js"></script>
+    <!--cookies-->
+    <div id="cookieConsent" class="cookie-consent">
+        <p>This website uses cookies to ensure you get the best experience on our website. <a href="./privacy.html">Learn more</a></p>
+        <button id="acceptCookies" class="button">Accept</button>
+    </div>
+
+    <style>
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            display: none;
+        }
+        .cookie-consent a {
+            color: #ce6e9f;
+        }
+        .cookie-consent .button {
+            margin-left: 10px;
+            background-color: #d664ac;
+            color: #333;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookieConsent').style.display = 'block';
+            }
+
+            document.getElementById('acceptCookies').addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                document.getElementById('cookieConsent').style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
