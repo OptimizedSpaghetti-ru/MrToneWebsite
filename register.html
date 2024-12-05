@@ -93,6 +93,17 @@
               <label for="password">Password</label>
               <input type="password" id="password" name="password" required />
             </div>
+
+            <div class="auth-form__item">
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm_password"
+                required
+              />
+            </div>
+
             <div class="auth-form__item">
               <label for="dob">Date of Birth</label>
               <input type="date" id="dob" name="dob" required />
@@ -104,7 +115,6 @@
         </form>
       </div>
     </main>
-    <!--Input Validation Script -->
     <script>
       document
         .getElementById("register-form")
@@ -113,6 +123,8 @@
           const lastName = document.getElementById("last-name").value;
           const dob = document.getElementById("dob").value;
           const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirm-password").value;
           const namePattern = /^[a-zA-Z]+$/;
           const today = new Date().toISOString().split("T")[0];
 
@@ -139,6 +151,11 @@
             alert(
               "Password must be at least 8 characters long and contain both letters and numbers."
             );
+            event.preventDefault();
+          }
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match.");
             event.preventDefault();
           }
         });
