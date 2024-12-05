@@ -90,3 +90,12 @@
 .main--padding {
   padding: 0.5rem;
 }
+.container-border {
+  border: 2px solid #ccc; /* Light gray border */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.centered-header {
+  text-align: center;
+}
