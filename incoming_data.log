@@ -1,0 +1,171 @@
+Array
+(
+    [productName] => REDONDON GUITAR
+    [productPrice] => ₱ 25000
+    [quantity] => 2
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+)
+Array
+(
+    [productName] => Montero Acoustic
+    [productPrice] => ₱ 15000
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+)
+Array
+(
+    [productName] => AMERICAN ACOUSTASONIC TELECASTER
+    [productPrice] => ₱ 4500
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+)
+Array
+(
+    [productName] => AMERICAN ACOUSTASONIC TELECASTER
+    [productPrice] => ₱ 4500
+    [quantity] => 2
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+)
+Array
+(
+    [productName] => AMERICAN ACOUSTASONIC TELECASTER
+    [productPrice] => ₱ 4500
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+)
+Array
+(
+    [productName] => Rick Owens Guitar
+    [productPrice] => ₱ 4500
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop/assets/images/gt_01.png
+)
+Array
+(
+    [productName] => Montero Acoustic
+    [productPrice] => ₱ 15000
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_03.png
+)
+Array
+(
+    [productName] => Jaggedmaster
+    [productPrice] => ₱ 9000
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_02.png
+)
+Array
+(
+    [productName] => Jaggedmaster
+    [productPrice] => ₱ 9000
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_02.png
+)
+Array
+(
+    [productName] => Rick Owens Guitar
+    [productPrice] => ₱ 4500
+    [quantity] => 5
+    [name] => qweqwe
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_01.png
+)
+Array
+(
+    [productName] => REDONDON GUITAR
+    [productPrice] => ₱ 25000
+    [quantity] => 1
+    [name] => rodge lomahan
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_05.png
+)
+Array
+(
+    [productName] => AMERICAN ACOUSTASONIC TELECASTER
+    [productPrice] => ₱ 4500
+    [quantity] => 1
+    [name] => Rodge
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_04.png
+)
+Array
+(
+    [productName] => AMERICAN ACOUSTASONIC TELECASTER
+    [productPrice] => ₱ 4500
+    [quantity] => 1
+    [name] => Jasper
+    [address] => 2521-D m delos reyes
+    [city] => Valenzuela City
+    [zip] => 1440
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_04.png
+)
+Array
+(
+    [productName] => AMERICAN ACOUSTASONIC TELECASTER
+    [productPrice] => ₱ 4500
+    [quantity] => 1
+    [name] => 
+    [address] => 
+    [city] => 
+    [zip] => 
+    [productImage] => http://localhost/guitar_shop3/assets/images/gt_04.png
+)
+Array
+(
+    [productName] => BOSS DYNAMIC WAH
+    [productPrice] => ₱ 4000
+    [quantity] => 1
+    [name] => 
+    [address] => 
+    [city] => 
+    [zip] => 
+    [productImage] => http://localhost/guitar_shop3/assets/images/pd_02.png
+)
+Array
+(
+    [productName] => BOSS DS-1 Distortion Pedal
+    [productPrice] => ₱ 3000
+    [quantity] => 1
+    [name] => 
+    [address] => 
+    [city] => 
+    [zip] => 
+    [productImage] => http://localhost/guitar_shop3/assets/images/pd_01.png
+)

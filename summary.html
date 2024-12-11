@@ -152,42 +152,66 @@
     <script src="js/summary.js"></script>
     <script src="js/checkout.js"></script>
     <script>
-      document
-        .getElementById("placeOrderButton")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent form submission
+   document.getElementById("placeOrderButton").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent form submission
 
-          // Get product details
-          const productImage = document.getElementById("product-image").src;
-          const productName =
-            document.getElementById("product-name").textContent;
-          const productPrice =
-            document.getElementById("product-price").textContent;
-          const quantity = document.getElementById("quantity").value;
+    // Get product details
+    const productName = document.getElementById("product-name").textContent;
+    const productPrice = document.getElementById("product-price").textContent;
+    const quantity = document.getElementById("quantity").value;
+    const productImage = document.getElementById("product-image").src; // Get the product image URL
 
-          // Get shipping details
-          const shippingDetails = {
-            name: document.getElementById("name").value,
-            address: document.getElementById("address").value,
-            city: document.getElementById("city").value,
-            zip: document.getElementById("zip").value,
-          };
+    // Get shipping details
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+    const city = document.getElementById("city").value;
+    const zip = document.getElementById("zip").value;
 
-          // Create an order object
-          const order = {
-            productImage,
-            productName,
-            productPrice,
-            quantity,
-            shippingDetails,
-          };
+    // Log the captured values to the console
+    console.log("Product Name:", productName);
+    console.log("Product Price:", productPrice);
+    console.log("Quantity:", quantity);
+    console.log("Customer Name:", name);
+    console.log("Address:", address);
+    console.log("City:", city);
+    console.log("ZIP Code:", zip);
 
-          // Save order to local storage
-          localStorage.setItem("order", JSON.stringify(order));
+    // Data to send
+    const orderData = {
+        productName,
+        productPrice,
+        quantity,
+        name,
+        address,
+        city,
+        zip,
+        productImage, // Store the product image URL
+    };
 
-          // Redirect to order.html
-          window.location.href = "./order.html";
-        });
+    // Store image in localStorage
+    localStorage.setItem("productImage", productImage);
+
+    // Send data to save_order.php
+    fetch("save_order.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
+    })
+    .then((response) => response.text())
+    .then((data) => {
+        console.log(data); // Log server response for debugging
+        alert("Order placed successfully!");
+        // Redirect to order.html after successful order placement
+        window.location.href = "order.html";
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+        alert("There was an error placing the order.");
+    });
+});
+
     </script>
   </body>
 </html>
